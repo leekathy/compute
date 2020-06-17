@@ -154,6 +154,10 @@ p {
     line-height: 1.45rem;
 }
 
+p + ul, li + ul {
+    margin-top: -0.5rem;
+}
+
 
 /* GAME STYLING */
 /* Prompt elements */
