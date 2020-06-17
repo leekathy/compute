@@ -13,6 +13,11 @@
     font-family: inherit;
 }
 
+html {
+    min-height: 100vh;
+    position: relative;
+}
+
 body {
     margin: 0;
     background: linear-gradient(#faaca8, #ddd6f3);
@@ -21,9 +26,9 @@ body {
 }
 
 footer {
-    position: fixed;
-    bottom: 3%;
-    right: 3%;
+    position: absolute;
+    bottom: 30px;
+    right: 40px;
     font-size: 125%;
 }
 
@@ -159,11 +164,14 @@ li {
 
 p {
     margin: 0.75rem 0;
-    line-height: 1.45rem;
 }
 
 p + ul, li + ul {
     margin-top: -0.5rem;
+}
+
+.recap {
+    line-height: 1.45rem;
 }
 
 
@@ -229,6 +237,7 @@ section#logParent, section#leaderboardParent {
 }
 
 .logContainer > div, .leader > div {
+    min-width: 5rem;
     justify-content: center;
 }
 
@@ -311,9 +320,6 @@ section#logParent, section#leaderboardParent {
     }
     div.overflow {
         max-height: 262px;
-    }
-    footer {
-        display: none;
     }
 }
 
