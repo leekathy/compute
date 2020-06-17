@@ -151,13 +151,9 @@ li {
 
 p {
     margin: 0.75rem 0;
+    line-height: 1.45rem;
 }
 
-span {
-    margin: 0.2rem;
-    display: inline-block;
-    line-height: 1.3rem;
-}
 
 /* GAME STYLING */
 /* Prompt elements */
