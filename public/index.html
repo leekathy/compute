@@ -1,0 +1,101 @@
+<!--FILE: index.html
+    AUTHOR: leekathy
+    This file contains the html for the single-page application Compute.-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Compute</title>
+    <!-- These two lines provide automatic page and style reloading when files change -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/lib/client/updater.js" defer></script>
+    <script type="module" src="App.js"></script>  
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="base_styles.css">
+    <!-- NEED A SCRIPT TO SET UP MONGODB DATABASE -->
+  </head>
+  <body>
+    <header>
+      <h1>COMPUTE</h1>
+      <h2>Market-Making on Trivia Q's</h2>
+      <div class="buttonContainer">
+        <button id="login" type="click">Log in</button>
+        <button id="signup" type="click">Sign up</button>
+      </div>
+      <form class="hidden loadForm">
+        <input name="username" placeholder="username" pattern="[a-zA-Z0-9_]{1,8}" title="1-8 chars (a-Z, 0-9, _)" required>
+        <input name="password" type="password" pattern="[a-zA-Z0-9_]{1,8}" placeholder="password" title="1-8 chars (a-Z, 0-9, _)" required>
+        <button id="load" type="submit">play</button>
+      </form>
+    </header>
+    <main id="app">
+      <section id="welcome">
+        <div id="overview">
+          <h3>How to Play</h3><br>
+          <span><strong> Make a market </strong> on trivia q's and play against a computer trader. &#x1F929</span><br><br>
+        </div>
+        <span>To <strong>make a market:</strong></span>
+        <ul>
+          <li>Determine a <strong>bid-ask spread</strong> around the "expected" value.</li>
+          <ul>
+            <li>
+              <strong>bid</strong> = lower bound<br>
+              If the computer chooses to sell to you, you pay it the bid price.
+            </li>
+            <li>
+              <strong>ask</strong> = upper bound<br>
+              If the computer chooses to buy from you, it pays you the ask price.
+            </li>
+            <li><strong>NOTE :</strong> if your interval is too wide, the computer may refuse to trade.</li>
+          </ul>
+          <li><strong>Position</strong> = #bought &#8722 #sold</li>
+          <li>Limit your exposure by trying to zero out your position at finish.</li>
+          <ul>
+            <li><strong>TIP :</strong> adjust your bid-ask spread accordingly.</li>
+          </ul>
+          <li>After 90 seconds, you win if your <strong>net profit</strong> (net cash adjusted for your accumulated position) is positive! &#x1F911</li>
+        </ul>
+      </section>
+      <section class="hidden" id="instructions">
+        <div id = "specifics">
+          <h3><strong>RECAP</strong></h3>
+          <span><strong>90 seconds to maximize net profit</strong></span>  
+        </div>    
+        <p>
+          <span><strong>BID : </strong>you're willing to sell at your quoted bid price.</span><br>
+          <span><strong>ASK : </strong>you're willing to buy at your quoted ask price.</span>
+          <span><strong>BID, ASK</strong> are nonnegative reals with <strong>BID &#x2264 ASK</strong></span><br>
+          <span>bid-ask spread &#8594 1 bought & 1 sold makes (ask - bid) profit. </span>
+        </p>
+        <p>
+          <span><strong>NET POS (accumulated position) : </strong># you have</span><br>
+          <span>&nbsp&nbsp&nbsp&nbsp = (# computer has sold to you) - (# computer has bought from you)</span><br>
+          <span><strong>NOTE : </strong>you get a bonus for a zero or close-to-zero net position at finish.</span>
+        </p>
+        <p>
+          <span><strong>&#916POS =  0, +1, or -1</strong>, representing the computer refusing to trade, selling one to you, or buying one from you, respectively.</span><br>
+          <span><strong>&#916$ = 0, -bid, or +ask</strong>, again repr the computer refusing to trade, selling one to you, or buying one from you, respectively.</span><br>
+          <span><strong>NOTE : </strong>in a trade, positive <strong>&#916POS</strong> &#8800 negative profit and likewise negative <strong>&#916POS</strong> &#8800 positive profit. <br> To get a positive profit, you must have sold for &gt true value or bought for &lt true value. Difficulty increases with each bid-ask spread that nets you positive profit.</span>
+        </p>
+      </section>
+      <section class="hidden" id="promptParent">
+      </section>
+      <section class="hidden" id="logParent">
+      </section>
+      <section id="leaderboardParent">
+      </section>
+      <section class="hidden" id="contributionParent">
+        <h3>Contribute your own question!</h3>
+        <form id="contributionForm">
+          <input class="contribution" name="question" placeholder="Enter question" pattern="[a-zA-Z0-9. ]+[?]" title="Enter a question (ends in '?')." required>
+          <input class="contribution" name="answer" placeholder="Enter answer" pattern="[0-9.]+" title="Enter a real number." required>
+          <button class="contribution" id="contr" type="submit">contribute</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      a project by leekathy
+    </footer>
+  </body>
+</html>
