@@ -27,6 +27,14 @@ footer {
     font-size: 125%;
 }
 
+.icon {
+    font-size: x-large;
+}
+
+.icon:hover {
+    filter: invert(100%);
+}
+
 input, button {
     margin: 0 0.4rem;
     padding: 0.55rem;
