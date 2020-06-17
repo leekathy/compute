@@ -237,7 +237,7 @@ section#logParent, section#leaderboardParent {
 }
 
 .logContainer > div, .leader > div {
-    min-width: 5rem;
+    min-width: 4.5rem;
     justify-content: center;
 }
 
