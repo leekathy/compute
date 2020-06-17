@@ -154,7 +154,7 @@ span {
 /* GAME STYLING */
 /* Prompt elements */
 #promptParent {
-    flex-grow: 4;
+    flex-grow: 1;
 }
 
 .prompt {
@@ -188,7 +188,7 @@ span {
 
 /* Log, Leaderboard elements */
 #logParent {
-    flex-grow: 1;
+    flex-grow: 2;
 }
 
 .headingsContainer {
@@ -215,8 +215,15 @@ section#logParent, section#leaderboardParent {
 .logContainer > div, .leader > div {
     justify-content: center;
 }
+
 .logContainer > div {
-    width: 70px;
+    display: inline-block;
+    word-break: break-word;
+    flex: 1 1 0px;
+}
+
+.gamelog + .logContainer > div {
+    word-break: normal;
 }
 
 .position, .rankAttr {
