@@ -30,11 +30,18 @@ footer {
 input, button {
     margin: 0 0.4rem;
     padding: 0.55rem;
-    background-color: #f5f5f5;
     border: none;
     border-radius: 0.6rem;
     font-size: medium;
     text-align: center;
+}
+
+input {
+    background-color: #f8f8f8;
+}
+
+button {
+    background-color: #f0f0f0;
 }
 
 input:focus, button:focus {
