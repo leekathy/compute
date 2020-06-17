@@ -25,8 +25,8 @@ module.exports = async (app) => {
 
     conn = await MongoClient.connect(MONGODB_URL, { useUnifiedTopology: true });
     db = conn.db(DATABASE_NAME);
-    Players = db.collection("Players");
-    Prompts = db.collection("Prompts");
+    Players = db.collection("players");
+    Prompts = db.collection("prompts");
     
     app.use("/api", api);
 };
