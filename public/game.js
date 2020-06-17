@@ -250,6 +250,7 @@ export default class Game {
      * The player's stats are appropriately updated and a relevant game-end message is displayed.
      */
     _concludeGame() {
+        this._form.reset();
         this._prompt.classList.add("hidden");
         this._form.classList.add("hidden");
 
