@@ -180,6 +180,7 @@ class App {
         }
 
         this._toInstructions();
+        this._loadForm.button.disabled = true;
     }
     
     /* FUNCTION: _toSignup
@@ -214,6 +215,7 @@ class App {
         }
 
         this._toInstructions();
+        this._loadForm.button.disabled = true;
     }
 
     /* FUNCTION: _onLogout 
