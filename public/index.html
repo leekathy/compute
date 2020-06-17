@@ -1,5 +1,5 @@
 <!--FILE: index.html
-    AUTHOR: leekathy
+    Author: leekathy
     This file contains the html for the single-page application Compute.-->
 
 <!DOCTYPE html>
@@ -10,10 +10,12 @@
     <!-- These two lines provide automatic page and style reloading when files change -->
     <script src="/socket.io/socket.io.js"></script>
     <script src="/lib/client/updater.js" defer></script>
-    <script type="module" src="App.js"></script>  
+    <!-- Sets up web app -->
+    <script type="module" src="app.js"></script>
+    <!-- Sets up Mongo DB -->
+    <script src="../dbsetup.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">  
     <link rel="stylesheet" href="base_styles.css">
-    <!-- NEED A SCRIPT TO SET UP MONGODB DATABASE -->
   </head>
   <body>
     <header>
