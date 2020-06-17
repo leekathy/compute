@@ -1,4 +1,4 @@
-/* FILE: Player.js
+/* FILE: player.js
  * Author: leekathy
  * This file contains the Player class, which handles account creation and login through username 
  * and password and the update of player stats.

@@ -42,7 +42,7 @@ api.get("/", (req, res) => {
 });
 
 
-/* API REQUESTS RELEVANT TO PLAYER CLASS */
+/* FOR API REQUESTS RELEVANT TO PLAYER CLASS */
 
 /* GET request: shows all player usernames */
 api.get("/players", async (req, res) => {
@@ -136,7 +136,7 @@ api.patch("/players/:username", async (req, res) => {
 });
 
 
-/* API REQUESTS RELEVANT TO PROMPT CLASS */
+/* FOR API REQUESTS RELEVANT TO PROMPT CLASS */
 
 /* GET request: Gets a random prompt */
 api.get("/prompts", async(req, res) => {
@@ -178,7 +178,7 @@ api.post("/prompts", async(req, res) => {
 });
 
 
-/* API REQUESTS RELEVANT TO LEADERBOARD CLASS */
+/* FOR API REQUESTS RELEVANT TO LEADERBOARD CLASS */
 
 /* GET request: gets the top specified number of players by points and by win ratio */
 api.get("/leaderboard", async (req, res) => {

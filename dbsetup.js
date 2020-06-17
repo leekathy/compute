@@ -1,7 +1,7 @@
 // FILE: dbsetup.js
 // Author: leekathy
 // This is a script file to initialize Compute's Mongo DB.
-// In the command line, run the following: mongo < dbsetup.js
+// Use "npm run setup" during the build process.
 
 use compute
 db.players.insertOne({ "username" : "sample1", "salt" : "xrFphrATk/Y=", "hashedPassword" : "CuwAbnd5OdRHyeRtxk1Ooz7sIAsWRJwSi8L3QRFE2rY=", "points" : 500, "numWins" : 0, "numPlayed" : 0, "winRatio" : 0 })

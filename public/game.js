@@ -1,4 +1,4 @@
-/* FILE: Game.js
+/* FILE: game.js
  * Author: leekathy
  * This file contains the Game class, which implements COMPUTE's main game component (prompt and game log).
  * Each iteration of the game has a single prompt and lasts 90 seconds (unlimited rounds). During each round, the user submits 

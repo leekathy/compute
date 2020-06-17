@@ -1,4 +1,4 @@
-/* FILE: Leaderboard.js
+/* FILE: leaderboard.js
  * Author: leekathy
  * This file contains the Leaderboard class, which handles the points and win ratio leaderboards.
  */

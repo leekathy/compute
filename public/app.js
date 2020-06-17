@@ -1,4 +1,4 @@
-/* FILE: App.js
+/* FILE: app.js
  * Author: leekathy
  * This file contains the App class, which implements COMPUTE. 
  * Player login, leaderboard display, prompt contributions, and repeated game attempts are supported. 

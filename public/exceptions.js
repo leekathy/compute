@@ -1,4 +1,4 @@
-/* FILE: Exceptions.js
+/* FILE: exceptions.js
  * Author: leekathy
  * This file contains 2 custom exception classes, UsernameException and PasswordException, 
  * that are child classes of the Error class.

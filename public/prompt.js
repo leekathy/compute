@@ -1,4 +1,4 @@
-/* FILE: Prompt.js
+/* FILE: prompt.js
  * Author: leekathy
  * This file contains the Prompt class. The methods allow for the retrieval of a random prompt and
  * the addition of a user input prompt to the database of prompts.
