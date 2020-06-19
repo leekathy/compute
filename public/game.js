@@ -21,11 +21,11 @@ const NUM_UNITS = 1; // Number of units bought/sold by the computer in each roun
 const ADJUST = 0.5; // Sets initial difficulty.
 const ADJUST_DOWN = 0.9; // Increases difficulty upon user profit.
 
-let timer;
-
 export default class Game {
     
     constructor(username) {
+        this._timer = null;
+        
         this._username = username;
         this._promptParent = null;
         this._logParent = null;
@@ -67,7 +67,7 @@ export default class Game {
         this._statsNode = statsNode;
 
         // Start timer for first game.
-        timer = setTimeout(this._concludeGame, 90000);
+        this._timer = setTimeout(this._concludeGame, 90000);
     }
     
     /* FUNCTION: _setupPrompt
@@ -382,6 +382,6 @@ export default class Game {
         
         this._form.bid.focus();
         // Restart timer.
-        timer = setTimeout(this._concludeGame, 90000);
+        this._timer = setTimeout(this._concludeGame, 90000);
     }
 }

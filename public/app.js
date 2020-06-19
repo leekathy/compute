@@ -65,7 +65,7 @@ class App {
 
         // Set up leaderboard.
         this._leaderboard = document.querySelector("#leaderboardParent");
-        let topPlayers = await Leaderboard.loadTop(5);
+        let topPlayers = await Leaderboard.loadTop(4);
         topPlayers.create(this._leaderboard);
     }
 
